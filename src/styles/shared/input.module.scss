@@ -1,0 +1,55 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.input {
+  position: relative;
+  font-size: 16px;
+  margin-top: 20px;
+  color: var(--gray);
+  outline: none;
+  @include box-shadow;
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    @include box-shadow($color: rgba(51, 51, 51, 0.12));
+  }
+
+  label {
+    visibility: hidden;
+    position: absolute;
+    left: 16px;
+    top: 0px;
+    font-size: 13px;
+    color: $color-tertiary;
+    transition: top 0.2s;
+  }
+
+  input {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    transition: padding 0.2s;
+
+    &:focus::placeholder {
+      color: #fff;
+    }
+
+    &:disabled::placeholder,
+    &:disabled {
+      color: var(--gray);
+      background-color: var(--white);
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      padding: 26px 16px 6px;
+    }
+
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+      visibility: visible;
+      top: 6px;
+      transition: top 0.2s;
+    }
+  }
+}

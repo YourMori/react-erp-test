@@ -1,0 +1,27 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.header {
+  padding: $spacing-sm $spacing-md;
+  text-align: center;
+  background-color: $color-light;
+  color: $color-primary;
+  @include flex-center($justify-content: space-between);
+  @include box-shadow;
+  z-index: 10;
+
+  .auth {
+    @include flex-center;
+    gap: $spacing-md;
+
+    .icon {
+      cursor: pointer;
+      @include typography($font-size-lg, $line-height-lg);
+
+      &:hover {
+        color: $color-highlight;
+        transition: 0.2s;
+      }
+    }
+  }
+}

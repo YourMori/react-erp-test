@@ -1,0 +1,87 @@
+@import "../base/variables";
+
+.card {
+  max-width: 1600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login {
+  max-width: 600px;
+}
+
+.rounded-none {
+  border-radius: 0;
+}
+
+.rounded-xs {
+  border-radius: $rounded-xs;
+}
+
+.rounded-sm {
+  border-radius: $rounded-sm;
+}
+
+.rounded-md {
+  border-radius: $rounded-md;
+}
+
+.rounded-lg {
+  border-radius: $rounded-lg;
+}
+
+.rounded-xl {
+  border-radius: $rounded-xl;
+}
+
+.rounded-xxl {
+  border-radius: $rounded-xxl;
+}
+
+.p-xs {
+  padding: $spacing-sm;
+}
+
+.p-sm {
+  padding: $spacing-md;
+}
+
+.p-md {
+  padding: $spacing-md;
+}
+
+.p-lg {
+  padding: $spacing-lg;
+}
+
+.p-xl {
+  padding: $spacing-xl;
+}
+
+.p-xxl {
+  padding: $spacing-xxl;
+}
+
+.text-xs {
+  font-size: $font-size-xs;
+}
+
+.text-sm {
+  font-size: $font-size-sm;
+}
+
+.text-md {
+  font-size: $font-size-md;
+}
+
+.text-lg {
+  font-size: $font-size-lg;
+}
+
+.text-xl {
+  font-size: $font-size-xl;
+}
+
+.text-xxl {
+  font-size: $font-size-xxl;
+}

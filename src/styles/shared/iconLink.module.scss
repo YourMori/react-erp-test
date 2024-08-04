@@ -1,0 +1,39 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.link {
+  display: flex;
+  align-items: center;
+  padding: $spacing-md $spacing-sm;
+  text-decoration: none;
+  color: $color-dark;
+  transition: background-color 0.3s;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid $color-tertiary;
+
+  &:hover {
+    .icon,
+    .text {
+      color: $color-highlight;
+      transition: 0.2s;
+    }
+  }
+
+  .icon {
+    @include flex-center;
+    font-size: 1.5rem;
+    color: $color-dark;
+  }
+
+  .text {
+    position: absolute;
+    left: 3rem;
+    white-space: nowrap;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s, width 0.3s;
+    transform: translateX(-1rem);
+  }
+}

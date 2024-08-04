@@ -1,0 +1,17 @@
+@import "../base/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .main {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 78px 1fr;
+
+    &__right {
+      padding: 0 90px;
+    }
+  }
+}
